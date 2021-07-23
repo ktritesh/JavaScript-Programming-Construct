@@ -1,18 +1,20 @@
-"use strict";
+var unit = 10;
+var place;
 
-const ps = require("prompt-sync");
-const prompt = ps();
-
-let input = prompt("Enter 1 or 10 or 100 or 1000: ");
-
-if ( input == 1 ) {
-    console.log("One");
-} else if ( input == 10 ) {
-    console.log("Ten");
-} else if ( input == 100 ) {
-    console.log("Hundred");
-} else if ( input == 1000 ) {
-    console.log("Thousand")
-} else {
-    console.log("you have entered wrong input")
+switch(unit) {
+    case 1:
+        place = "Ones";
+        break;
+    case 10:
+        place = "Tens";
+        break;
+    case 100:
+        place = "Hundreds";
+        break;
+    case 1000:
+        place = "Thousand";
+        break;
+    default:
+        place = "Invalid input";         
 }
+console.log(place);
